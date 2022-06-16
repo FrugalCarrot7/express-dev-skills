@@ -14,7 +14,10 @@
         <li>
           <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
             - 
-          <%= skill.skill ? 'done' : 'not done' %>
+          <%= skill.ability ? 'got' : 'get good scrub' %>
+          <form action="/skills/<%= skill.id %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">X</button>
         </li>
       <% }); %>
     </ul>
